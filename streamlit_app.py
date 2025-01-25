@@ -1,4 +1,11 @@
-# streamlit_app.py
+"""
+streamlit_app.py
+
+A Streamlit web app that fetches top news, cleans it,
+and identifies up to 3 dangerous countries.
+
+Requires pygooglenews==0.1.3 (for feedparser 6.x support) and Python 3.12+ to avoid use_2to3 issues.
+"""
 
 import os
 import glob
@@ -71,7 +78,7 @@ def fetch_and_clean_news():
     with open(clean_file_name, 'w', encoding="utf-8") as clean_file:
         clean_file.write("\n\n".join(cleaned_articles))
 
-    # Manage file limits (only keep 1 raw + 1 clean)
+    # Keep only 1 raw + 1 clean
     manage_file_limits(DATA_FOLDER, "news_raw_*.json", 1)
     manage_file_limits(DATA_FOLDER, "news_clean_*.txt", 1)
 
@@ -112,7 +119,7 @@ def find_country_danger_lines(text: str, country_names: set[str]) -> dict[str, l
         line_lower = line.lower()
         # if it has a danger keyword
         if any(kw in line_lower for kw in danger_lower):
-            # check if a recognized country is also in line
+            # check if recognized country is also in line
             matching = [c for c in country_names if c in line_lower]
             for lc_country in matching:
                 display_country = lc_country.title()

@@ -1,9 +1,24 @@
-pygooglenews
-beautifulsoup4
+# Fetch Google News top stories
+pygooglenews==0.1.3
+
+# HTML parsing
+beautifulsoup4>=4.11.2
+
+# Task scheduling
+schedule>=1.2.0
+
+# Country detection
+pycountry==24.6.1
+
+# For building a Streamlit web app
+streamlit>=1.22.0
+
+# LangChain & related dependencies
 langchain==0.3.14
-langchain-ollama
-chromadb
-schedule
-pycountry
-ollama
-streamlit
+langchain-ollama>=0.0.7
+
+# Chromadb for vector storage (if used by your LLM code)
+chromadb>=0.3.26
+
+# Python wrapper for Ollama
+ollama>=0.0.4
