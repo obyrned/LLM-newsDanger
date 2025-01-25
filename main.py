@@ -10,7 +10,7 @@ from langchain_ollama import ChatOllama
 logging.basicConfig(level=logging.INFO)
 
 DATA_FOLDER = "./data"
-MODEL_NAME = "llama3.2:latest"
+MODEL_NAME = "deepseek-r1:8b"
 
 # “Danger” keywords or phrases
 DANGER_KEYWORDS = {
