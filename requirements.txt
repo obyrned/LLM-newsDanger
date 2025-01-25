@@ -1,0 +1,8 @@
+pygooglenews
+beautifulsoup4
+langchain==0.3.14
+langchain-ollama
+chromadb
+schedule
+pycountry
+ollama
