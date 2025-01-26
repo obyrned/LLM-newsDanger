@@ -1,6 +1,6 @@
 # LLM-newsDanger
 
-LLM-newsDanger is a tool that reads and analyzes global news to identify and highlight countries of concern. Using the DeepSeek-r1:8b model, it provides insights into geopolitical, social, and environmental risks.
+LLM-newsDanger is a tool that uses RAG to identify and highlight countries of concern. Using the DeepSeek-r1:8b model, it provides insights into geopolitical, social, and environmental risks.
 
 ---
 
